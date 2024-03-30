@@ -2,6 +2,17 @@ let x = 0;
 let y = 0;
 let operator = '';  
 
+const display = document.querySelector('.displayTextBox > p');
+const numButtons = document.querySelectorAll('.numButton');
+const operators = document.querySelectorAll('.operatorButton');
+const equals = document.querySelector('#equal');
+const clear = document.querySelector('.clear');
+const del = document.querySelector('.delete');
+
+function addToDisplay (numButton){
+    display.textContent += numButton.id;
+}
+
 function add (x, y){
     return x + y;
 }
@@ -30,3 +41,4 @@ function operate (x, operand, y){
             return divide(x,y);
     }
 }
+

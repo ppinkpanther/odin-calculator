@@ -75,7 +75,7 @@ table {
     padding: 5px;
 }
 
-.display-text {
+.displayTextBox{
     width: 370px;
     height: 80px;
     background-color: white;
@@ -86,7 +86,7 @@ table {
     align-items: center;
 }
 
-.display-text > p {
+.displayTextBox > p {
     font-size: 48px;
     padding: 5px;
     overflow: auto;
