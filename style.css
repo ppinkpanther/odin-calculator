@@ -5,24 +5,34 @@
     background-color: rgb(9, 58, 100);
     padding: 10px;
 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
     
 }
 
 .display {
     background-color: rgb(128, 126, 126);
-    height: 100px;
-    width: 400px;
-    margin: 0 auto;
+    height: 80px;
+    width: 380px;
+    margin: 0 auto 10px;
+    display: block;
 }
 
+.display p {
+    width: 380px;
+    height: 80px;
+}
 
 .buttons {
+    height: 100%;
     display: flex;
 
 }
 
 button {
-    height: 75px;
+    height: 20%;
 }
 
 .centralButtons {
@@ -43,7 +53,7 @@ button {
 }
 
 #equal {
-    flex-basis: 150px;
+    flex-basis: 40%;
 }
 
 #zero {
