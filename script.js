@@ -1,10 +1,10 @@
 let x = 0;
 let y = 0;
 let operator = '';  
+let displayValue = '';
 
 const display = document.querySelector('.displayTextBox > p');
-const numButtons = document.querySelectorAll('.numButton');
-const operators = document.querySelectorAll('.operatorButton');
+const buttons = document.querySelector('.buttons');
 const equals = document.querySelector('#equal');
 const clear = document.querySelector('.clear');
 const del = document.querySelector('.delete');
@@ -41,4 +41,5 @@ function operate (x, operand, y){
             return divide(x,y);
     }
 }
+
 
