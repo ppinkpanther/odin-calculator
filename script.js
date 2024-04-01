@@ -42,4 +42,9 @@ function operate (x, operand, y){
     }
 }
 
-
+buttons.addEventListener('click', (e) => {
+    let buttonClass = e.target.className;
+    if(buttonClass === 'numButton'){
+        display.textContent += e.target.id;
+    }
+})
