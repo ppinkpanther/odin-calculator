@@ -84,6 +84,8 @@ buttons.addEventListener('click', (e) => {
         operatorPress(e);
     }else if(buttonClass === 'equal') {
         equalPress();
+    }else if(buttonClass === 'clear'){
+        display.textContent = '';
     }
 
     display.textContent = Number(display.textContent);
