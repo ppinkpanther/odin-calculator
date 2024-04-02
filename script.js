@@ -76,6 +76,12 @@ function equalPress () {
     }
 }
 
+function deletePress() {
+    let currentText = display.textContent;
+    display.textContent = currentText.slice(0,-1);
+
+}
+
 buttons.addEventListener('click', (e) => {
     let buttonClass = e.target.className;
     if(buttonClass === 'numButton'){
@@ -84,8 +90,10 @@ buttons.addEventListener('click', (e) => {
         operatorPress(e);
     }else if(buttonClass === 'equal') {
         equalPress();
-    }else if(buttonClass === 'clear'){
+    }else if(buttonClass === 'clear') {
         display.textContent = '';
+    }else if (buttonClass === 'delete') {
+        deletePress();
     }
 
     display.textContent = Number(display.textContent);
