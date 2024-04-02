@@ -58,7 +58,6 @@ function setDisplay (e) {
 function operatorPress(e){
     if(operatorActive){
         secondNum = Number(display.textContent);
-        console.log(operate(firstNum, operator, secondNum));
         display.textContent = operate(firstNum, operator, secondNum);
         firstNum = Number(display.textContent);
         operator = e.target.id;
@@ -76,7 +75,6 @@ buttons.addEventListener('click', (e) => {
     }else if(buttonClass === 'operatorButton') {
         operatorPress(e);
     }
-    console.log(operator, operatorActive);
 })
 
 
