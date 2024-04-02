@@ -68,12 +68,22 @@ function operatorPress(e){
     }
 }
 
+function equalPress () {
+    if(operatorActive){
+        secondNum = Number(display.textContent);
+        display.textContent = operate(firstNum, operator, secondNum);
+        operatorActive = false;
+    }
+}
+
 buttons.addEventListener('click', (e) => {
     let buttonClass = e.target.className;
     if(buttonClass === 'numButton'){
         setDisplay(e);
     }else if(buttonClass === 'operatorButton') {
         operatorPress(e);
+    }else if(buttonClass === 'equal') {
+        equalPress();
     }
 })
 
