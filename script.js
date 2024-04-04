@@ -47,11 +47,14 @@ function operate (x, operand, y){
     
 }
 
+
+
 function setDisplay (e) {
     if(!operatorActive){
         display.textContent += e.target.id;
     }else {
-        display.textContent = '' + e.target.id;
+        secondNum += e.target.id;
+        display.textContent = secondNum;
     }
 }
 
@@ -60,6 +63,7 @@ function operatorPress(e){
         secondNum = Number(display.textContent);
         display.textContent = operate(firstNum, operator, secondNum);
         firstNum = Number(display.textContent);
+        secondNum = '';
         operator = e.target.id;
     }else {
         operatorActive = true;
