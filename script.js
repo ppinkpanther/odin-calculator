@@ -50,7 +50,9 @@ function operate (x, operand, y){
 
 
 function setDisplay (e) {
-    if(!operatorActive){
+    if(display.textContent === '0'){
+        display.textContent = e.target.id;
+    }else if(!operatorActive){
         display.textContent += e.target.id;
     }else {
         secondNum += e.target.id;
@@ -100,7 +102,7 @@ buttons.addEventListener('click', (e) => {
         deletePress();
     }
 
-    display.textContent = Number(display.textContent);
+    // display.textContent = Number(display.textContent);
 })
 
 
