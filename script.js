@@ -79,6 +79,7 @@ function equalPress () {
         secondNum = Number(display.textContent);
         display.textContent = operate(firstNum, operator, secondNum);
         operatorActive = false;
+        secondNum = '';
     }
 }
 
