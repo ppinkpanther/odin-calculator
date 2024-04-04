@@ -26,7 +26,11 @@ function multiply (x, y){
 } 
 
 function divide (x, y){
-    return x / y
+    if(y == 0){
+        return 'Not funny buddy.';
+    }else {
+        return x / y;
+    }
 }
 
 function operate (x, operand, y){
@@ -98,13 +102,12 @@ buttons.addEventListener('click', (e) => {
     }else if(buttonClass === 'equal') {
         equalPress();
     }else if(buttonClass === 'clear') {
-        display.textContent = '';
+        display.textContent = '0';
         secondNum = '';
     }else if (buttonClass === 'delete') {
         deletePress();
     }
 
-    // display.textContent = Number(display.textContent);
 })
 
 
