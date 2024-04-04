@@ -104,6 +104,9 @@ buttons.addEventListener('click', (e) => {
     }else if(buttonClass === 'clear') {
         display.textContent = '0';
         secondNum = '';
+        firstNum = '';
+        operator = '';
+        operatorActive = false;
     }else if (buttonClass === 'delete') {
         deletePress();
     }
