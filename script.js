@@ -99,6 +99,7 @@ buttons.addEventListener('click', (e) => {
         equalPress();
     }else if(buttonClass === 'clear') {
         display.textContent = '';
+        secondNum = '';
     }else if (buttonClass === 'delete') {
         deletePress();
     }
